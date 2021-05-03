@@ -34,13 +34,11 @@ jobs:
           #node-version: # optional
           # Target architecture for Node to use. Examples: x86, x64. Will use system architecture by default.
 
-      - name: Yarn & Node install cache
-        # You may pin to the exact commit or the version.
-        # uses: EgorDm/gha-yarn-node-cache@5e3a518810b21a8e0e1d236a3db83a18cfc1be9e
-        uses: EgorDm/gha-yarn-node-cache@v1
+      - name: yarn install
+        run: yarn install
         
-      - name: build
+      - name: nx build
         run: nx build
         
-      - name: test
+      - name: nx test
         run: nx test
