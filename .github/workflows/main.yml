@@ -37,8 +37,8 @@ jobs:
       - name: yarn install
         run: yarn install
         
-      - name: nx build
-        run: yarn nx build
-        
-      - name: nx test
-        run: yarn nx test
+      - uses: mansagroup/nrwl-nx-action@v2
+        with:
+          targets: lint, test, build
+          parallel: 'true'
+          affected: 'true'
