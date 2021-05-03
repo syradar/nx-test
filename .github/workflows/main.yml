@@ -38,7 +38,7 @@ jobs:
         run: yarn install
         
       - name: nx build
-        run: nx build
+        run: yarn nx build
         
       - name: nx test
-        run: nx test
+        run: yarn nx test
